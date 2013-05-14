@@ -20,6 +20,7 @@ Package.on_use(function (api) {
     'mars/objinspector.coffee',
     'mars/objinspector.less'
     ], 'client');
+  api.add_files('mars/objinspector_server.coffee', 'server')
 
 });
 }

@@ -49,11 +49,11 @@ _.extend Template.observatoryjsObjectInspector,
     i = _.find Session.get('oi_object_list'), (item) ->
           b[1] == item[1] and b[0] == item[0]
     if i
-      objectPath = i.slice(2).concat(b.slice(2))
+      objectPath = i.slice(2).concat(b.slice(2))      
       if i[0] == 'c'
         Session.set('oi_object_info', Template.observatoryjsObjectInspector.objectInfo(objectPath))
       else
-        Meteor.call 'oiObjectInfo', objectPath, (e,r) ->
+        Meteor.call 'oiObjectInfo', objectPath, (e,r) ->          
           Session.set('oi_object_info', r)
     true
 
@@ -131,15 +131,9 @@ Template.observatoryjsObjectInspector.events
 #
 # METHODS
 #
-
-if Meteor.isServer
-  Meteor.methods
-    oiObjectInfo: (objectPath) ->
-      Template.observatoryjsObjectInspector.objectInfo(objectPath)
-
-if Meteor.isClient
-  Meteor.startup ->
-
+    
+if Meteor.isClient   
+  Meteor.startup ->    
     #
     # INIT 
     #
