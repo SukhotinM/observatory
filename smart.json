@@ -7,7 +7,8 @@
   "git": "https://github.com/jhoxray/observatory.git",
   "packages": {
     "observatory-apollo": {
-        "git": "https://github.com/superstringsoftware/observatory-apollo.git"
+        "git": "https://github.com/SukhotinM/observatory-apollo.git",
+        "tag": "sukhomik"
     }
   }
 }
